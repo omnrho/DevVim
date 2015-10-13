@@ -17,7 +17,10 @@ filetype plugin on
 au FileType c,cpp setlocal comments-=:// comments+=f://
 au FileType c,cpp set expandtab 
 nmap <C-]> g<C-]>
- 
+set tags+=${PWD}/TAGDIR/tags
+if filereadable("./TAGDIR/cscope.out")
+    cs add ${PWD}/TAGDIR/cscope.out
+endif
 """""""""""""""""""""""""""""""
 " function key  setting
 """"""""""""""""""""""""""""""
