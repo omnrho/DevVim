@@ -1,0 +1,2 @@
+#! /bin/sh
+find -name "*.[ch]" |xargs grep --color=auto "$1"

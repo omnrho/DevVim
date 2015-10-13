@@ -1,0 +1,2 @@
+#!/bin/sh
+readelf -a $1 | grep --color=auto "Shared library:"
