@@ -1,9 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/work/project/isorouter/201405/models/ASKEY_AP4100W_8MB_64MB/apps'
-let g:netrw_dirhist_2='/work/project/isorouter/201405/models/ASKEY_AP4100W_8MB_64MB/apps/system_probe'
-let g:netrw_dirhist_3='/work/project/rg300w/apps/miniupnpc'
-let g:netrw_dirhist_4='/work/project/isorouter/201405/models/ASKEY_AP4100W_8MB_64MB'
-let g:netrw_dirhist_5='/work/project/isorouter/201405/models/ASKEY_AP4100W_8MB_64MB/apps'
-let g:netrw_dirhist_6='/work/project/isorouter/201405/sdk/mtk_SDK_4200_20131106/RT288x_SDK/source/linux-2.6.36.x/arch/mips/include/asm/mach-ralink'
-let g:netrw_dirhist_7='/work/project/SINGTEL_AP5100W_32MB_256MB/sdk/rtl819x/config'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/gibson/Git_VDisk/isorouter/models/ASKEY_RTV1907VW_512MB_512MB/apps'
+let g:netrw_dirhist_2='/home/gibson/Git_VDisk/isorouter/.git'
+let g:netrw_dirhist_3='/home/gibson/.git'
+let g:netrw_dirhist_4='/home/gibson/Git_VDisk/isorouter/models/ASKEY_RTV1907VW_512MB_512MB/apps/dnrd'

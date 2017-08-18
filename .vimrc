@@ -15,7 +15,8 @@ let mapleader = ","
 filetype on 
 filetype plugin on
 au FileType c,cpp setlocal comments-=:// comments+=f://
-au FileType c,cpp set expandtab 
+"au FileType c,cpp set expandtab 
+au FileType c,cpp setl nofen | setl fdm=syntax
 nmap <C-]> g<C-]>
 set tags+=${PWD}/TAGDIR/tags
 if filereadable("./TAGDIR/cscope.out")
@@ -34,6 +35,7 @@ nmap <F9> :source ~/.vimrc<CR>
 nmap <F10> :set tags+=${TOPDIR}/TAGDIR/kernel/tags<CR>:cs add ${TOPDIR}/TAGDIR/kernel/cscope.out<CR>
 nmap <F11> :set tags+=${TOPDIR}/TAGDIR/mapps/tags<CR>:cs add ${TOPDIR}/TAGDIR/mapps/cscope.out<CR>
 nmap <F12> :!~/.vim/scripts/uptags<CR><CR>:set tags+=${PWD}/TAGDIR/tags<CR>:cs add ${PWD}/TAGDIR/cscope.out<CR>
+"nmap <leader>fd :setl fdm=syntax<CR>:setl fen<CR>
 
 """""""""""""""""""""""""""""""
 " tagbar  setting

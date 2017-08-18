@@ -4,7 +4,7 @@ KERNEL_TAG_DIR=$(TOPDIR)/TAGDIR/kernel
 MAPP_TAG_DIR=$(TOPDIR)/TAGDIR/mapps
 -include Profile.mak
 
-all: profile linux mapps
+all: profile linux mapps trace_tool
 	@echo "export TOPDIR=$(TOPDIR)" > $(TOPDIR)/trace_p.sh 
 	@echo "export BRAND_NAME=$(BRAND_NAME)" >> $(TOPDIR)/trace_p.sh 
 	@echo "export MODEL_NAME=$(MODEL_NAME)" >> $(TOPDIR)/trace_p.sh 
@@ -144,3 +144,14 @@ mapps:
 	cat $(MAPP_TAG_DIR)/apps_used_files_0 |sort |uniq > $(MAPP_TAG_DIR)/apps_used_files && rm $(MAPP_TAG_DIR)/apps_used_files_0
 	cd $(MAPP_TAG_DIR) && cscope -bkq -i $(MAPP_TAG_DIR)/apps_used_files
 	cd $(MAPP_TAG_DIR) && ctags --c++-kinds=+p --fields=+iaS --links=yes --extra=+q -L $(MAPP_TAG_DIR)/apps_used_files
+
+trace_tool:
+#	cd ~/trace_tool/strace-4.10 && ./configure --host $(ARCH)-linux && make	
+#	cd ~/trace_tool/libelf-0.8.13 && ./configure --host $(ARCH)-linux --enable-nls=no --enable-gnu-names --prefix=/work/trace_tool/tmpdir/libelf && make && make install	
+#	cd ~/trace_tool/libelf-0.8.13 && ./configure --host $(ARCH)-linux --enable-nls=no --prefix=/work/trace_tool/tmpdir/libelf && make && make install	
+#	cd ~/trace_tool/elfutils-0.148 && ./configure --host $(ARCH)-linux --prefix=/work/trace_tool/tmpdir/elfutils && make 	
+#	cd ~/trace_tool/ltrace-0.7.3 && ./configure --host $(ARCH)-linux --with-libelf=/work/trace_tool/tmpdir/libelf --disable-werror && make	
+#	cd ~/trace_tool/strace-4.10 && ./configure --host $(ARCH)-linux --prefix=$(TOPDIR)/Trace_Tool_DIR/strace && make && make install
+#	cd ~/trace_tool/valgrind-3.11.0 && ./configure --host $(ARCH)-linux --prefix=$(TOPDIR)/Trace_Tool_DIR/valgrind && make && make install	
+	cd ~/trace_tool/valgrind-3.11.0 && ./configure --host $(ARCH)-linux --prefix=/tmp/memcheck/ && make clean &&make && make install
+	
