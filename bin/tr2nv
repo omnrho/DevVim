@@ -1,0 +1,11 @@
+#!/bin/sh
+set -- `echo $1 |sed "s/Device/CWMP/" -|cut -d'.' -s --output-delimiter=$'\t' -f 1-`
+for i in $@
+do
+	if [[ "$i" =~ ^[0-9]+$ ]] ;then
+		ins=$ins".$i"		
+	else
+		strippath=$strippath$i
+	fi
+done
+echo $strippath$ins
